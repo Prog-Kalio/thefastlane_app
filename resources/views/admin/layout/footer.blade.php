@@ -1,0 +1,5 @@
+<footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-evenly">
+        <p class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © {{ date("Y") }}. All rights reserved. <a href="https://www.thefastlane.com.ng/" target="_blank">TheFastLane Cinemas</a></p>
+    </div>
+</footer>
