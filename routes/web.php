@@ -23,5 +23,35 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-//Admin Dashboard router without Admin groups
-Route::get('admin/dashboard', 'App\Http\Controllers\Admin\AdminController@dashboard');
+//Admin Login router without Admin groups
+// Route::get('admin/login', 'App\Http\Controllers\Admin\AdminController@login');
+
+
+Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
+    //Admin Login router with Admin groups
+    Route::match(['get', 'post'], 'login', 'AdminController@login');
+
+    Route::group(['middleware'=> ['admin']],function() {
+        // Admin Dashboard Routes with admin group
+        Route::get('dashboard', 'AdminController@dashboard');
+
+        //Update Admin password
+        Route::match(['get','post'],'update-admin-password', 'AdminController@updateAdminPassword');
+
+        //Check Admin password
+        Route::post('check-admin-password', 'AdminController@checkAdminPassword');
+
+        //Update Admin details
+        Route::match(['get','post'],'update-admin-details', 'AdminController@updateAdminDetails');
+
+        //View Admin, Subadmins
+        Route::get('admins/{type?}', 'AdminController@admins');
+
+        //Update Admin Status
+        Route::post('update-admin-status', 'AdminController@updateAdminStatus');
+
+        //Admin Logout Route
+        Route::get('logout', 'AdminController@logout');
+    });
+
+});
