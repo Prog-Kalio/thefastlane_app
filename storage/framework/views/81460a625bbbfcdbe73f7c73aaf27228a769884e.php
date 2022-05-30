@@ -46,7 +46,7 @@
                             <div class="tiles default"></div>
                         </div>
                     </div>
-                </div>>
+                </div>
                 <!-- partial -->
                 <!-- partial:partials/_sidebar.html -->
                 <?php echo $__env->make('admin.layout.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

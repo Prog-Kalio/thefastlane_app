@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable; 
 
-class Admin extends Model
+//change Model in class to Authenticatable since I'm using Authenticatable
+class Admin extends Authenticatable
 {
     use HasFactory;
 

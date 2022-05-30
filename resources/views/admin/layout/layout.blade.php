@@ -46,7 +46,7 @@
                             <div class="tiles default"></div>
                         </div>
                     </div>
-                </div>>
+                </div>
                 <!-- partial -->
                 <!-- partial:partials/_sidebar.html -->
                 @include('admin.layout.sidebar')
