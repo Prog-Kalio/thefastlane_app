@@ -64,6 +64,7 @@
                 </div><br>
                 <div class="text-center">
                   <small class="text-muted">New Admin?<br> Contact your administrator for Registration</small>
+                  <div><a href="<?php echo e(url('/')); ?>"><b><i><small class="text-danger">Movie Premier</small></i></b></a></div>
                 </div>
               </form>
             </div>
