@@ -34,13 +34,16 @@
                                             Movie Name
                                         </th>
                                         <th>
-                                            Movie Image
+                                            Show Time
                                         </th>
                                         <th>
                                             Movie Price
                                         </th>
                                         <th>
                                             Genre
+                                        </th>
+                                        <th>
+                                            Duration
                                         </th>
                                         <th>
                                             Duration
@@ -69,7 +72,7 @@
                                             {{ $movie['movie_name'] }}
                                         </td>
                                         <td>
-                                            {{ $movie['movie_image'] }}
+                                            {{ $movie['show_time'] }}
                                         </td>
                                         <td>
                                             {{ $movie['movie_price'] }}

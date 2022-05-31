@@ -35,13 +35,16 @@
                                             Movie Name
                                         </th>
                                         <th>
-                                            Movie Image
+                                            Show Time
                                         </th>
                                         <th>
                                             Movie Price
                                         </th>
                                         <th>
                                             Genre
+                                        </th>
+                                        <th>
+                                            Duration
                                         </th>
                                         <th>
                                             Duration
@@ -73,7 +76,7 @@
 
                                         </td>
                                         <td>
-                                            <?php echo e($movie['movie_image']); ?>
+                                            <?php echo e($movie['show_time']); ?>
 
                                         </td>
                                         <td>

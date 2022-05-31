@@ -55,25 +55,25 @@ class MovieController extends Controller
 
             $rules = [
                 'movie_name' => 'required',
-                'movie_image' => 'required',
                 'movie_price' => 'required|numeric',
                 'description' => 'required',
                 'genre' => 'required',
                 'movie_star' => 'required',
                 'movie_duration' => 'required',
+                'show_time' => 'required',
                 'meta_title' => 'required',
                 'meta_description' => 'required',
                 'meta_keywords' => 'required',
             ];
             $customMessages = [
                 'movie_name.required' => 'Movie Name is required',
-                'movie_image.required' => 'Movie Image is required',
                 'movie_price.required' => 'Movie Price is required',
                 'movie_price.numeric' => 'Movie Price must be numbers',
                 'description.required' => 'Movie description is required',
                 'genre.required' => 'Movie genre is required',
                 'movie_star.required' => 'Movie Star is required',
                 'movie_duration.required' => 'Movie Duration is required',
+                'show_time.required' => 'Show Time is required',
                 'meta_title.required' => 'Meta Title is required',
                 'meta_description.required' => 'Meta Description is required',
                 'meta_keywords.required' => 'Meta Keywords is required',
@@ -108,6 +108,7 @@ class MovieController extends Controller
             $movie->genre = $data['genre'];
             $movie->movie_star = $data['movie_star'];
             $movie->movie_duration = $data['movie_duration'];
+            $movie->show_time = $data['show_time'];
             $movie->meta_title = $data['meta_title'];
             $movie->meta_description = $data['meta_description'];
             $movie->meta_keywords = $data['meta_keywords'];

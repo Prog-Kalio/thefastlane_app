@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('genre');
             $table->string('movie_star');
             $table->string('movie_duration');
+            $table->datetime('show_time');
             $table->string('meta_title');
             $table->string('meta_description');
             $table->string('meta_keywords');

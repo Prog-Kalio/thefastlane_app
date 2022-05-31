@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
                       <label for="movie_image">Movie Image</label>
-                      <input type="file" class="form-control" id="movie_image" name="movie_image" placeholder="Movie image" value="<?php echo e($movie['movie_image']); ?>" required>
+                      <input type="file" class="form-control" id="movie_image" name="movie_image" placeholder="Movie image" value="<?php echo e($movie['movie_image']); ?>">
                       <?php if(!empty($movie['movie_image'])): ?>
                         <a target="_blank" href="<?php echo e(url('admin/images/movies/'.$movie['movie_image'])); ?>"><small>View Image</small></a>
                         <input type="hidden" name="current_movie_image" value="<?php echo e($movie['movie_image']); ?>">
@@ -83,6 +83,10 @@
                     <div class="form-group">
                       <label for="movie_duration">Movie duration</label>
                       <input type="text" class="form-control" id="movie_duration" name="movie_duration" placeholder="Movie duration" value="<?php echo e($movie['movie_duration']); ?>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="show_time">Show Time</label>
+                      <input type="text" class="form-control" id="show_time" name="show_time" placeholder="show time" value="<?php echo e($movie['show_time']); ?>" required>
                     </div>
                     <div class="form-group">
                       <label for="meta_title">Meta title</label>
