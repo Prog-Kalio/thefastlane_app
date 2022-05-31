@@ -8,7 +8,6 @@ use App\Models\Admin;
 use Auth;
 use Hash;
 use Image;
-use Session;
 
 class AdminController extends Controller
 {
@@ -57,7 +56,6 @@ class AdminController extends Controller
 
     //Update Admin Password
     public function updateAdminPassword(Request $request) {
-        Session::put('page', 'update_admin_password');
         // echo "<pre>"; print_r(Auth::guard('admin')->user()); die();
         if($request->isMethod('post')) {
             $data = $request->all();
@@ -97,7 +95,6 @@ class AdminController extends Controller
 
     //Update Admin Details
     public function updateAdminDetails(Request $request) {
-        Session::put('page', 'update_admin_details');
         if($request->isMethod('post')) {
             $data = $request->all();
             // echo "<pre>"; print_r($data); die();
@@ -138,6 +135,37 @@ class AdminController extends Controller
             return redirect()->back()->with('success_message','Details updated successfully');
         }
         return view('admin.settings.update_admin_details');
+    }
+
+
+    public function admins($type=null) {
+        $admins = Admin::query();
+        if(!empty($type)) {
+            $admins = $admins->where('type', $type);
+            $title = ucfirst($type)."s";
+        }
+        else {
+            $title = "All Admins/Subadmins/Vendors";
+        }
+        $admins = $admins->get()->toArray();
+        // dd($admins);
+        return view('admin.admins.admins')->with(compact('admins', 'title'));
+    }
+
+
+    public function updateAdminStatus(Request $request) {
+        if($request->ajax()) {
+            $data = $request->all();
+            // echo "<pres>"; print_r($data); die;
+            if($data['status']=="Active") {
+                $status = 0;
+            }
+            else {
+                $status = 1;
+            }
+            Admin::where('id', $data['admin_id'])->update(['status'=>$status]);
+            return response()->json(['status'=>$status, 'admin_id'=>$data['admin_id']]);
+        }
     }
 
 

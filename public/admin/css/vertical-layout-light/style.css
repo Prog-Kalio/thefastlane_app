@@ -13312,6 +13312,10 @@ input[type="button"].btn-block {
   list-style: none;
 }
 
+.my-nav:hover {
+  background-color: rgb(231, 197, 197);
+}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;

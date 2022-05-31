@@ -52,6 +52,30 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
 
         //Admin Logout Route
         Route::get('logout', 'AdminController@logout');
+
+        //Locations of the Cinema
+        Route::get('locations', 'LocationController@locations');
+
+        //Update Location Status
+        Route::post('update-location-status', 'LocationController@updateLocationStatus');
+
+        //Delete location
+        Route::get('delete-location/{id}', 'LocationController@deleteLocation');
+
+        //Add and Edit Location of Cinema
+        Route::match(['get', 'post'],'add-edit-location/{id?}', 'LocationController@addEditLocation');
+
+        //Movies in database
+        Route::get('movies', 'MovieController@movies');
+
+        //Update Movie Status
+        Route::post('update-movie-status', 'MovieController@updateMovieStatus');
+
+        //Delete movie
+        Route::get('delete-movie/{id}', 'MovieController@deleteMovie');
+        
+        //Add and Edit Movies
+        Route::match(['get', 'post'],'add-edit-movie/{id?}', 'MovieController@addEditMovie');
     });
 
 });
