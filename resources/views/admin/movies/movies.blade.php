@@ -46,9 +46,6 @@
                                             Duration
                                         </th>
                                         <th>
-                                            Duration
-                                        </th>
-                                        <th>
                                             Image
                                         </th>
                                         <th>

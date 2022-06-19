@@ -19,7 +19,7 @@
                     <div><small>Price: {{ $location['movie'][0]['movie_price'] }} </small></div>
                     <div><small>Duration: {{ $location['movie'][0]['movie_duration'] }} </small></div>
                     <div><small>Location: {{ $location['name'] }} </small></div>
-                    <div><small>Duration: {{ $location['movie'][0]['show_time'] }} </small></div>
+                    <div><small>Show Time: {{ $location['movie'][0]['show_time'] }} </small></div>
                     <div><small>Description: {{ $location['movie'][0]['description'] }} </small></div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div><small>Price: {{ $location['movie'][1]['movie_price'] }} </small></div>
                     <div><small>Duration: {{ $location['movie'][1]['movie_duration'] }} </small></div>
                     <div><small>Location: {{ $location['name'] }} </small></div>
-                    <div><small>Duration: {{ $location['movie'][1]['show_time'] }} </small></div>
+                    <div><small>Show Time: {{ $location['movie'][1]['show_time'] }} </small></div>
                     <div><small>Description: {{ $location['movie'][1]['description'] }} </small></div>
                 </div>
             </div>

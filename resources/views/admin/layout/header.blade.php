@@ -25,7 +25,7 @@
                 <img src="{{ url('admin/images/faces/kalio.jpeg') }}" alt="profile"/>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
+                    <a class="dropdown-item" href="{{ url('admin/update-admin-details') }}">
                     <i class="ti-settings text-primary"></i>
                     Settings
                     </a>
